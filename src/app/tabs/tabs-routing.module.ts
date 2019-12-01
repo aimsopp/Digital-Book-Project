@@ -38,6 +38,36 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'chapter1',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../chapters/chapter1/chapter1.module').then(m => m.Chapter1PageModule)
+          }
+        ]
+      },
+      {
+        path: 'chapter2',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../chapters/chapter2/chapter2.module').then(m => m.Chapter2PageModule)
+          }
+        ]
+      },
+      {
+        path: 'chapter3',
+        children: [
+          {
+            path: '',
+            loadChildren: () =>
+              import('../chapters/chapter3/chapter3.module').then(m => m.Chapter3PageModule)
+          }
+        ]
+      },
+      {
         path: '',
         redirectTo: '/tabs/tab1',
         pathMatch: 'full'
